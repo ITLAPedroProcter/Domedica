@@ -18,7 +18,7 @@ namespace AspNetCoreWebService.Controllers
         }
         
         [HttpGet("api/test/")]
-        public JsonResult Get([FromQuery] string name = "World")
+        public JsonResult test([FromQuery] string name = "World")
         {
             return Json(new Response("OMG"));
         }
