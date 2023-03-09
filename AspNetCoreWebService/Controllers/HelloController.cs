@@ -16,6 +16,12 @@ namespace AspNetCoreWebService.Controllers
         {
             return Json(new Response(string.Format(MESSAGE_FORMAT, name)));
         }
+        
+        [HttpGet("api/test/")]
+        public JsonResult Get([FromQuery] string name = "World")
+        {
+            return Json(new Response("OMG"));
+        }
 
         [HttpPost]
         public JsonResult Post([FromBody]string name = "World")
